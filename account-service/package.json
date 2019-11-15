@@ -1,0 +1,37 @@
+{
+  "name": "soa-account-service",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate-latest": "knex migrate:latest",
+    "migrate-rollback": "knex migrate:rollback",
+    "lint": "eslint --fix . && echo 'Lint complete!'",
+    "start": "node index.js",
+    "deploy": "knex migrate:latest && npm start"
+  },
+  "dependencies": {
+    "acorn": "^7.0.0",
+    "app-module-path": "^2.2.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "latest",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "jest": "^24.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.17.6",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "sqlite3": "^4.0.9",
+    "superagent": "^5.0.7",
+    "supertest": "^4.0.2"
+  }
+}
